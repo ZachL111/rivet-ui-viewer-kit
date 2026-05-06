@@ -1,0 +1,73 @@
+{
+  "repo": "rivet-ui-viewer-kit",
+  "language": "Lua",
+  "category": "Frontend apps",
+  "goal": "Develop a Lua command-oriented project for viewer scenarios with bounded scenario files, conflict explanations, and explicit failure cases.",
+  "review_model": {
+    "terms": [
+      "view drift",
+      "state pressure",
+      "layout risk",
+      "interaction cost"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "view drift",
+      "signal": 56,
+      "slack": 36,
+      "drag": 13,
+      "confidence": 84,
+      "score": 193,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "state pressure",
+      "signal": 60,
+      "slack": 29,
+      "drag": 12,
+      "confidence": 92,
+      "score": 205,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "layout risk",
+      "signal": 48,
+      "slack": 35,
+      "drag": 19,
+      "confidence": 56,
+      "score": 130,
+      "lane": "watch"
+    },
+    {
+      "name": "recovery",
+      "focus": "interaction cost",
+      "signal": 69,
+      "slack": 53,
+      "drag": 31,
+      "confidence": 85,
+      "score": 183,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "view drift",
+      "signal": 64,
+      "slack": 43,
+      "drag": 14,
+      "confidence": 92,
+      "score": 221,
+      "lane": "ship"
+    }
+  ]
+}
